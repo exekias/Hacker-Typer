@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="jquery-1.11.0.min.js"></script>
+        <script src="clippy.js"></script>
+        <link rel="stylesheet" type="text/css" href="clippy.css" media="all">
+    </head>
+
+    <body>
+        <p> I am a cow that has added <a href=https://github.com/smore-inc/clippy.js"> Clippy JS</a></p>
+        <p> The variable "cow" contains the agent, so you can have fun at the console, try cow.play(action), where actions are listed at the site above (as Searching, GetAttention, ...)</p>
+        <script type="text/javascript">
+            clippy.BASE_PATH = "./agents/";
+            clippy.load('Clippy', function(agent){
+                    cow = agent;
+                    agent.play('Searching');
+                    agent.show();
+                    });
+        </script>
+    </body>
+</html>
